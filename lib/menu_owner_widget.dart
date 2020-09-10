@@ -7,6 +7,8 @@
     */
 
 import 'package:flutter/material.dart';
+import 'package:p4u/Bilalscode/edit_lots/edit_lot_details_tab_widget.dart';
+import 'package:p4u/Bilalscode/subscription_screen/subscriptions_widget.dart';
 import 'package:p4u/add_lot_details_tab_widget.dart';
 import 'package:p4u/attendants_widget.dart';
 import 'package:p4u/edit_lot_details_tab_widget.dart';
@@ -17,7 +19,7 @@ import 'package:p4u/reviews_widget.dart';
 import 'package:p4u/scanner_widget.dart';
 import 'package:p4u/subscriptions_widget.dart';
 import 'package:p4u/values.dart';
-import 'package:p4u/Bilalscode/add_lot_details_tab_screen.dart';
+import 'package:p4u/Bilalscode/add_lots/add_lot_details_tab_screen.dart';
 
 
 class MenuOwnerWidget extends StatefulWidget {
@@ -500,7 +502,7 @@ class _MenuOwnerWidgetState extends State<MenuOwnerWidget> {
     }
 
     else if (value == "3") {
-      return EditLotDetailsTabWidget();
+      return EditLotDetailsTabScreen();
     }
 
     else if (value == "4") {
@@ -512,7 +514,7 @@ class _MenuOwnerWidgetState extends State<MenuOwnerWidget> {
     }
 
     else if (value == "6") {
-      return SubscriptionsWidget();
+      return SubscriptionScreen();
     }
     else if (value == "7") {
       return ReviewsWidget();

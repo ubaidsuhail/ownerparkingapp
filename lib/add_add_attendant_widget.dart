@@ -118,7 +118,7 @@ class AddAddAttendantWidget extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 156,
+              top: 50,
               right: 23,
               bottom: 69,
               child: Column(

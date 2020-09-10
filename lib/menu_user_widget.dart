@@ -17,7 +17,7 @@ import 'package:p4u/reviews_widget.dart';
 import 'package:p4u/scanner_widget.dart';
 import 'package:p4u/subscriptions_widget.dart';
 import 'package:p4u/values.dart';
-import 'package:p4u/Bilalscode/add_lot_details_tab_screen.dart';
+import 'package:p4u/Bilalscode/add_lots/add_lot_details_tab_screen.dart';
 
 
 class MenuUserWidget extends StatefulWidget {
