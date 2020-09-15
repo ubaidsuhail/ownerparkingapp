@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:p4u/login_attendant_widget.dart';
 import 'package:p4u/login_owner_widget.dart';
 import 'package:p4u/values.dart';
-
+import 'package:p4u/staticfile.dart';
 
 class WelcomeWidget extends StatelessWidget {
   
@@ -123,6 +123,7 @@ class WelcomeWidget extends StatelessWidget {
                  children: <Widget>[
                    GestureDetector(
                      onTap: (){
+                       StaticData.check = 1;
                        //Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => LoginWidget()));
                        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginOwnerWidget()));
                      },
@@ -154,6 +155,7 @@ class WelcomeWidget extends StatelessWidget {
 
                    GestureDetector(
                      onTap: (){
+                       StaticData.check = 2;
                        //Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => LoginWidget()));
                        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginAttendantWidget()));
                      },

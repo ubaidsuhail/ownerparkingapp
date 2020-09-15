@@ -9,6 +9,9 @@
 import 'package:flutter/material.dart';
 import 'package:p4u/home_widget.dart';
 import 'package:p4u/values.dart';
+import 'package:p4u/staticfile.dart';
+import 'package:p4u/menu_owner_widget.dart';
+import 'package:p4u/menu_user_widget.dart';
 
 
 class CHARGECREDITCARDWidget extends StatelessWidget {
@@ -100,7 +103,7 @@ class CHARGECREDITCARDWidget extends StatelessWidget {
 
                                                     SizedBox(width: MediaQuery.of(context).size.width*0.31,),
 
-                                                    Text("Regular",style: TextStyle(
+                                                    Text("\t\t\t\tRegular",style: TextStyle(
                                                       color: Color.fromARGB(255, 0, 0, 0),
                                                       fontFamily: "Roboto",
                                                       fontWeight: FontWeight.bold,
@@ -357,6 +360,19 @@ class CHARGECREDITCARDWidget extends StatelessWidget {
                               child: FlatButton(
                                   onPressed: () {
                                     //Navigator.push(context, MaterialPageRoute(builder: (context) => COLLECTCASHCHECKOUTWidget()));
+                                    if(StaticData.check == 1)
+                                    {
+                                      Navigator.pushAndRemoveUntil(context,
+                                          MaterialPageRoute(builder: (BuildContext context) => HomeWidget()),
+                                          ModalRoute.withName('/'));
+                                    }
+                                    else if(StaticData.check == 2 )
+                                    {
+                                      Navigator.pushAndRemoveUntil(context,
+                                          MaterialPageRoute(builder: (BuildContext context) => HomeWidget()),
+                                          ModalRoute.withName('/'));
+                                    }
+
                                   },
                                   color: Color.fromARGB(255, 137, 255, 8),
                                   shape: RoundedRectangleBorder(

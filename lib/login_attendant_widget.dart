@@ -17,10 +17,10 @@ import 'package:p4u/menu_user_widget.dart';
 
 class LoginAttendantWidget extends StatelessWidget {
   
-  void onLoginButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
-  
-  void onForgotPasswordResPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswordWidget()));
-  
+//  void onLoginButtonPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
+//
+//  void onForgotPasswordResPressed(BuildContext context) => Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswordWidget()));
+//
   @override
   Widget build(BuildContext context) {
 
@@ -190,31 +190,7 @@ class LoginAttendantWidget extends StatelessWidget {
                               ),
 
                               SizedBox(height:30.0),
-
-                              RichText(
-                                text: TextSpan(
-                                  text: 'Don’t have an account? ',
-                                  style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontFamily: "Roboto",
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 16,
-                                  ),
-                                  children: <TextSpan>[
-                                    TextSpan(
-                                      text: 'Signup',
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = () {
-                                          //print("Signup");
-                                          Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterOwnerWidget()));
-                                        },
-                                      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
-                                    ),
-
-
-                                  ],
-                                ),
-                              ),
+                              
                             ],
                           ),
 

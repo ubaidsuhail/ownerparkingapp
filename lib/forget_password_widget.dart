@@ -19,6 +19,11 @@ class ForgetPasswordWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+      ),
         body:SingleChildScrollView(
             child:Container(
                 height: MediaQuery.of(context).size.height,
@@ -171,30 +176,6 @@ class ForgetPasswordWidget extends StatelessWidget {
 
                               SizedBox(height:10.0),
 
-                              RichText(
-                                text: TextSpan(
-                                  text: 'Don’t have an account? ',
-                                  style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontFamily: "Roboto",
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 16,
-                                  ),
-                                  children: <TextSpan>[
-                                    TextSpan(
-                                      text: 'Signup',
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap = () {
-                                          print("Signup");
-                                          Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterOwnerWidget()));
-                                        },
-                                      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
-                                    ),
-
-
-                                  ],
-                                ),
-                              ),
 
 
 

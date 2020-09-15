@@ -8,6 +8,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:p4u/home_widget.dart';
+import 'package:p4u/menu_owner_widget.dart';
 import 'package:p4u/values.dart';
 
 
@@ -351,19 +352,19 @@ class ReportResultsWidget extends StatelessWidget {
                                 height: 25.0,
                               ),
 
-                              Container(
-                                  width: MediaQuery.of(context).size.width*0.4,
-                                  height: MediaQuery.of(context).size.height*0.07,
-                                  child:FlatButton(
-                                      onPressed: () {
-                                          print("hi");
-                                      },
-                                      color: AppColors.secondaryElement,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                                      ),
-                                      textColor: Color.fromARGB(255, 255, 255, 255),
-                                      padding: EdgeInsets.all(0),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.pushReplacement(context,
+                                      MaterialPageRoute(builder: (context) => MenuOwnerWidget()));
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    color: Colors.blue[900]
+                                  ),
+                                    width: MediaQuery.of(context).size.width*0.4,
+                                    height: MediaQuery.of(context).size.height*0.07,
+                                    child:Center(
                                       child: Text(
                                         "Done",
                                         textAlign: TextAlign.center,
@@ -376,6 +377,7 @@ class ReportResultsWidget extends StatelessWidget {
                                       ),
                                     )
 
+                                ),
                               ),
 
                               SizedBox(

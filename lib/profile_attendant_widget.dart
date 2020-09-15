@@ -59,7 +59,7 @@ class ProfileAttendantWidget extends StatelessWidget {
                             height: 100.0,
                             // margin: EdgeInsets.only(left: 35),
                             child: Image.asset(
-                              "assets/images/avatar.png",
+                              "assets/images/profile-pic.png",
                               fit: BoxFit.fill,width: 100.0,height:100.0,
                             ),
                           ),
@@ -223,79 +223,8 @@ class ProfileAttendantWidget extends StatelessWidget {
 
 
                             SizedBox(
-                              height: 35.0,
+                              height: 20.0,
                             ),
-
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child:Text(
-                                "STRIPE KEYS",
-                                style: TextStyle(
-                                  color: AppColors.secondaryText,
-                                  fontFamily: "Roboto",
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 17,
-                                ),
-                              ),
-                            ),
-
-                            SizedBox(height: 10.0),
-
-                            TextFormField(
-                              decoration: InputDecoration(
-                                  hintText: "SECRET KEY",
-                                  contentPadding: EdgeInsets.only(left: 10.0),
-                                  enabledBorder:UnderlineInputBorder (
-                                    borderSide: BorderSide(color:Colors.grey[400]),
-                                  )
-                              ),
-                            ),
-
-                            TextFormField(
-                              decoration: InputDecoration(
-                                  hintText: "PUBLISHABLE KEY",
-                                  contentPadding: EdgeInsets.only(left: 10.0),
-                                  enabledBorder:UnderlineInputBorder (
-                                    borderSide: BorderSide(color:Colors.grey[400]),
-                                  )
-                              ),
-                            ),
-
-                            SizedBox(
-                              height: 12.0,
-                            ),
-
-                            Container(
-                                width: MediaQuery.of(context).size.width*0.45,
-                                height: MediaQuery.of(context).size.height*0.06,
-                                child: FlatButton(
-                                    onPressed: (){
-
-                                    },
-                                    color: AppColors.secondaryElement,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                                    ),
-                                    textColor: Color.fromARGB(255, 255, 255, 255),
-                                    padding: EdgeInsets.all(0),
-                                    child: Text(
-                                        "Save",
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          color: AppColors.primaryText,
-                                          fontFamily: "Roboto",
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 17,
-                                        )
-                                    )
-                                )
-                            ),
-
-                            SizedBox(
-                              height: 25.0,
-                            ),
-
-
 
                           ],
 
@@ -310,6 +239,7 @@ class ProfileAttendantWidget extends StatelessWidget {
                 ]
             )
         ));
+
 
   }
 }

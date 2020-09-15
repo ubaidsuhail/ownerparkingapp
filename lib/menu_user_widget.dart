@@ -7,6 +7,7 @@
     */
 
 import 'package:flutter/material.dart';
+import 'package:p4u/drop_down.dart';
 import 'package:p4u/add_lot_details_tab_widget.dart';
 import 'package:p4u/attendants_widget.dart';
 import 'package:p4u/edit_lot_details_tab_widget.dart';
@@ -17,7 +18,8 @@ import 'package:p4u/reviews_widget.dart';
 import 'package:p4u/scanner_widget.dart';
 import 'package:p4u/subscriptions_widget.dart';
 import 'package:p4u/values.dart';
-import 'package:p4u/Bilalscode/add_lots/add_lot_details_tab_screen.dart';
+// import 'package:p4u/Bilalscode/add_lots/add_lot_details_tab_screen.dart';
+import 'package:p4u/login_attendant_widget.dart';
 
 
 class MenuUserWidget extends StatefulWidget {
@@ -278,7 +280,8 @@ class _MenuOwnerWidgetState extends State<MenuUserWidget> {
                       child: FlatButton(
                         onPressed: () {
                           Navigator.pop(context);
-                          Navigator.pop(context);
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) => LoginAttendantWidget()));
                         },
                         child: Row(
                           // mainAxisAlignment: MainAxisAlignment.center,
@@ -313,7 +316,7 @@ class _MenuOwnerWidgetState extends State<MenuUserWidget> {
 
   Widget ShowScreen() {
     if (value == "1") {
-      return HomeWidget();
+      return DropDownScreen();
     }
 
     else if (value == "2") {

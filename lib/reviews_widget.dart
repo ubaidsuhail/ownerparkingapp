@@ -198,7 +198,7 @@ class ReviewsWidget extends StatelessWidget {
                                             )
                                         ),
                                         Positioned(
-                                          left:MediaQuery.of(context).size.width*0.3,
+                                          left:MediaQuery.of(context).size.width*0.33,
                                           child:Container(
                                             width: 90.0,
                                             height: 90.0,

@@ -23,6 +23,11 @@ dependencies:
   # Declaration of dependencies included by Supernova Studio.
   google_maps_flutter: ^0.4.0
   flutter_launcher_icons: ^0.7.5
+  calendar_timeline: ^0.6.3
+  flutter_time_picker_spinner: ^1.0.6+1
+  easy_localization: ^2.3.3
+  fluttertoast: ^7.1.1
+  toast: ^0.1.5
 
 dev_dependencies:
   flutter_test:

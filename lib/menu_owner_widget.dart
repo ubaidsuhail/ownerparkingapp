@@ -7,20 +7,24 @@
     */
 
 import 'package:flutter/material.dart';
-import 'package:p4u/Bilalscode/edit_lots/edit_lot_details_tab_widget.dart';
-import 'package:p4u/Bilalscode/subscription_screen/subscriptions_widget.dart';
+//import 'file:///C:/Users/bilal/OneDrive/Documents/UB%20Technologies%20(Projects)/9-9-2020/p4uOwner/p4uOwner/lib/drop_down.dart';
+// import 'package:p4u/Bilalscode/edit_lots/edit_lot_details_tab_widget.dart';
+// import 'package:p4u/Bilalscode/report_screen.dart';
+// import 'package:p4u/Bilalscode/subscription_screen/subscriptions_widget.dart';
 import 'package:p4u/add_lot_details_tab_widget.dart';
 import 'package:p4u/attendants_widget.dart';
 import 'package:p4u/edit_lot_details_tab_widget.dart';
 import 'package:p4u/home_widget.dart';
 import 'package:p4u/profile_owner_widget.dart';
 import 'package:p4u/report_results_widget.dart';
+import 'package:p4u/reports_widget.dart';
 import 'package:p4u/reviews_widget.dart';
 import 'package:p4u/scanner_widget.dart';
 import 'package:p4u/subscriptions_widget.dart';
 import 'package:p4u/values.dart';
-import 'package:p4u/Bilalscode/add_lots/add_lot_details_tab_screen.dart';
-
+import 'package:p4u/drop_down.dart';
+// import 'package:p4u/Bilalscode/add_lots/add_lot_details_tab_screen.dart';
+import 'package:p4u/login_owner_widget.dart';
 
 class MenuOwnerWidget extends StatefulWidget {
 
@@ -450,7 +454,9 @@ class _MenuOwnerWidgetState extends State<MenuOwnerWidget> {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    SizedBox(
+                      height: 5.0,
+                    ),
 
                     Padding(
                       padding: const EdgeInsets.symmetric(
@@ -458,7 +464,8 @@ class _MenuOwnerWidgetState extends State<MenuOwnerWidget> {
                       child: FlatButton(
                         onPressed: () {
                           Navigator.pop(context);
-                          Navigator.pop(context);
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) => LoginOwnerWidget()));
                         },
                         child: Row(
                           // mainAxisAlignment: MainAxisAlignment.center,
@@ -493,16 +500,16 @@ class _MenuOwnerWidgetState extends State<MenuOwnerWidget> {
 
   Widget ShowScreen() {
     if (value == "1") {
-      return HomeWidget();
+      return DropDownScreen();
     }
 
     else if (value == "2") {
       //return AddLotDetailsTabWidget();
-      return OnTapScreen();
+      return AddLotDetailsTabWidget();
     }
 
     else if (value == "3") {
-      return EditLotDetailsTabScreen();
+      return EditLotDetailsTabWidget();
     }
 
     else if (value == "4") {
@@ -514,14 +521,14 @@ class _MenuOwnerWidgetState extends State<MenuOwnerWidget> {
     }
 
     else if (value == "6") {
-      return SubscriptionScreen();
+      return SubscriptionsWidget();
     }
     else if (value == "7") {
       return ReviewsWidget();
     }
     else if (value == "8") {
       //return ReportsWidget();
-      return ReportResultsWidget();
+      return ReportsWidget();
     }
     else if (value == "9") {
       return ProfileOwnerWidget();
